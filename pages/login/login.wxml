@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<view>shmall</view>
+<view>
+  <view>用户名：</view>
+  <input type="text" placeholder="请输入用户名"/>
+</view>
+
+<view>
+  <view>密码：</view>
+  <input type="password" placeholder="请输入密码"/>
+</view>
+
+<!-- 注册/登录 按钮 -->
+<view>
+    <button>登录/注册</button>
+    <button>回到首页</button>
+</view>
+
+<view>
+  <view>
+    已有账号？去登录> / 没有账号？去注册
+  </view>
+</view>
