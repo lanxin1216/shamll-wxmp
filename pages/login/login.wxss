@@ -1,1 +1,85 @@
 /* pages/login/login.wxss */
+view.title {
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  margin: 20rpx 0;
+}
+
+page {
+  background: #fff;
+  height: 100%;
+}
+
+.con {
+  padding-top: 100rpx;
+}
+
+.login-form {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+
+.authorized-btn {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #0ab906;
+  border: 1rpx solid #0ab906;
+  color: #fff;
+  border-radius: 6rpx;
+  font-size: 26rpx;
+  margin-top: 60rpx;
+}
+
+.to-idx-bth {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1rpx solid #eeeeee;
+  color: #333;
+  border-radius: 6rpx;
+  font-size: 26rpx;
+  margin-top: 30rpx;
+}
+
+.item {
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.account {
+  display: flex;
+  background: #f8f8f8;
+  padding: 15rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  align-items: center;
+}
+
+.account input {
+  padding-left: 20rpx;
+  width: 75%;
+}
+
+.inp-palcehoder {
+  font-size: 26rpx;
+}
+
+/* 去注册 */
+
+.operate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.forgot-password,
+.to-register {
+  font-size: 28rpx;
+  color: #00AAFF;
+}
