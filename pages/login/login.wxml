@@ -13,14 +13,14 @@
 
   <view class="item">
     <view class="account">
-      <text class="input-item">密码</text>
+      <text class="input-item">密码：</text>
       <input type="password" data-type="password" placeholder-class="inp-palcehoder" value="{{password}}" placeholder="请输入密码"  bindinput="getInputVal"></input>
     </view>
   </view>
 
 <!-- 注册/登录 按钮 -->
   <view>
-    <button class="authorized-bth" bindtap="handleLoginOrRegister">{{isRegister? '注册' : '登录'}}</button>
+    <button class="authorized-btn" bindtap="handleLoginOrRegister">{{isRegister? '注册' : '登录'}}</button>
     <button class="to-idx-btn" bindtap="goBack">回到首页</button>
   </view>
 

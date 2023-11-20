@@ -5,6 +5,26 @@
     "pages/index/index",
     "pages/logs/logs"
   ],
+
+  "tabBar": {
+    "selectedColor": "#333",
+    "color": "#2ECCFA",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabbar/homepage.png",
+        "selectedIconPath": "/images/tabbar/homepage-sel.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "/images/tabbar/category.png",
+        "selectedIconPath": "/images/tabbar/category-sel.png"
+      }
+    ]
+  },
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",

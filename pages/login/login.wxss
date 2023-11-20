@@ -34,7 +34,7 @@ page {
   margin-top: 60rpx;
 }
 
-.to-idx-bth {
+.to-idx-btn {
   width: 100%;
   margin: 0 auto;
   text-align: center;

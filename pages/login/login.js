@@ -1,3 +1,6 @@
+var http = require("../../utils/http.js");
+var crypto = require("../../utils/crypto.js")
+
 // pages/login/login.js
 Page({
 
@@ -78,11 +81,11 @@ Page({
     const type = e.currentTarget.dataset.type
     if (type == 'account') {
       this.setData({
-        userName: e.detail.value
+          userName: e.detail.value
       })
     } else if (type == 'password') {
       this.setData({
-        password: e.detail.value
+          password: e.detail.value
       })
     }
   },
@@ -91,7 +94,7 @@ Page({
    * 切换注册\登录
    */
   handleChangeShowType() {
-    let str = this.onAddToFavorites.isRegister ? '1' : '0'
+    let str = this.data.isRegister ? '1' : '0'
     wx.redirectTo({
       url: '/pages/login/login?isRegister=' + str
     })
@@ -109,21 +112,40 @@ Page({
       })
       return
     }
-
-    if(this.data.isRegister) {
-      that.setData({
-        userName: '',
-        password: '',
-        isRegister: !that.data.isRegister
-      })
+    if (!this.data.password.trim()) {
       wx.showToast({
-        title: '注册成功，请登录',
-        icon: 'none',
+          title: '请输入密码',
+          icon: 'none'
       })
-    }else {
-      wx.switchTab({
-        url: '/pages/index/index',
-      })
+      return
     }
+
+    const params = {
+      url: this.data.isRegister ? '/user/register' : '/login',
+      method: "POST",
+      data: {
+        userName: this.data.userName,
+        passWord: crypto.encrypt(this.data.password)
+      },
+      callBack: (res) => {
+        wx.setStorageSync('token', res.accessToken)
+        if(this.data.isRegister) {
+          that.setData({
+            userName: '',
+            password: '',
+            isRegister: !that.data.isRegister
+          })
+          wx.showToast({
+            title: '注册成功，请登录',
+            icon: 'none',
+          })
+        }else {
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+        }
+      }
+    };
+    http.request(params);
   }
 })
