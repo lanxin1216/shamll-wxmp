@@ -1,33 +1,26 @@
 <!--pages/login/login.wxml-->
-<!-- 不能有散落的标签 -->
-<!-- 标题 -->
-<view class="title">shmall</view>
-
+<!-- <image src='http://img-test.gz-yami.com/mini/logo.jpg' class='c-logo'></image> -->
+<view class="title">商城系统</view>
 <view class="login-form">
-  <view class="item">
-    <view class="account">
-      <text class="input-item">用户名：</text>
-      <input type="text" data-type="account" placeholder-class="inp-palcehoder" value="{{userName}}" placeholder="请输入用户名" bindinput="getInputVal"></input>
+    <view class="item">
+        <view class="account">
+            <text class="input-item">用户名</text>
+            <input type="text" data-type="account" placeholder-class="inp-palcehoder" value="{{userName}}" placeholder="请输入用户名" bindinput="getInputVal"></input>
+        </view>
     </view>
-  </view>
-
-  <view class="item">
-    <view class="account">
-      <text class="input-item">密码：</text>
-      <input type="password" data-type="password" placeholder-class="inp-palcehoder" value="{{password}}" placeholder="请输入密码"  bindinput="getInputVal"></input>
+    <view class="item">
+        <view class="account">
+            <text class="input-item">密码</text>
+            <input type="password" data-type="password" placeholder-class="inp-palcehoder" value="{{password}}" placeholder="请输入密码" bindinput="getInputVal"></input>
+        </view>
     </view>
-  </view>
-
-<!-- 注册/登录 按钮 -->
-  <view>
-    <button class="authorized-btn" bindtap="handleLoginOrRegister">{{isRegister? '注册' : '登录'}}</button>
-    <button class="to-idx-btn" bindtap="goBack">回到首页</button>
-  </view>
-
-
-  <view class="operate">
-    <view class="to-register" bindtap="handleChangeShowType">
-        {{isRegister?'已有账号？去登录>' : '没有账号？去注册'}}
+    <view>
+        <button class="authorized-btn" bindtap="handleLoginOrRegister">{{isRegister ? '注册': '登录'}}</button>
+        <button class="to-idx-btn" bindtap="goBack">回到首页</button>
     </view>
-  </view>
+    <view class="operate">
+        <view class="to-register" bindtap="handleChangeShowType">
+            {{isRegister?'已有账号？去登录>' : '没有账号？去注册>'}}
+        </view>
+    </view>
 </view>
